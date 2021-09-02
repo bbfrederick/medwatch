@@ -17,7 +17,7 @@ from bleak import BleakScanner, BleakClient
 from bleak.backends.scanner import AdvertisementData
 from bleak.backends.device import BLEDevice
 
-wanted_name = u"MED-WATCH009"
+wanted_name = u"MED-WATCH"
 docsv = True
 
 UART_SERVICE_UUID = "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
@@ -90,8 +90,9 @@ async def uart_terminal(thewantedname):
         # advertising data. This test may need to be adjusted depending on the
         # actual advertising data supplied by the device.
         if UART_SERVICE_UUID.lower() in adv.service_uuids:
-            if str(adv.local_name).encode("utf-8") == thewantedname.encode("utf-8"):
-                print(f"connected to {thewantedname}")
+            thisname = str(adv.local_name).encode("utf-8")
+            if thisname[0:9] == thewantedname.encode("utf-8"):
+                print(f"connected to {str(thisname)}")
                 if docsv:
                     print("spo2, bpm, ecg_1, ecg_2, ecg_3, ir_raw, red_raw, ir_filtered, red_filtered, acc_x, acc_y, acc_z")
                 return True
