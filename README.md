@@ -1,6 +1,6 @@
 # medwatch
 
-A simple set of utilities to interact with the medwatch.  Should work on mac, windows, and linux.
+A simple set of utilities to interact with the medwatch.  Tested on a mac, but should work on windows and linux with no modification.
 
 Requires numpy and bleak.  After installing python 3x, install these using:
 
