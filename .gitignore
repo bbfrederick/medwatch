@@ -113,4 +113,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# swap files
+*.swp
+
+# miscellaneous source stuff
 otherstuff
