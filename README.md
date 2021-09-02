@@ -8,6 +8,8 @@ pip install numpy bleak
  
 Currently there are three programs:
 
-findmedwatch: finds any BLE devices nearby whose device name starts with "MED-WATCH"
+**blelist**:  Lists nearby BLE devices
 
-readwatch: Continuously reads the output of a running medwatch, dumps the output to the terminal.  Currently it will attach to the first medwatch it finds.
+**findmedwatch**: finds any BLE devices nearby whose device name starts with "MED-WATCH"
+
+**readwatch**: Continuously reads the output of a running medwatch, dumps the output to the terminal.  Currently it will attach to the first medwatch it finds.
