@@ -6,7 +6,7 @@ Requires numpy and bleak.  After installing python 3x, install these using:
 
 pip install numpy bleak
  
-Currently there are three programs (found in the scripts folder):
+Currently there are three programs (found in the scripts folder).  These are all heavily based on the bleak example code.:
 
 **blelist**:  Lists nearby BLE devices
 
