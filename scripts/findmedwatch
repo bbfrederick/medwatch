@@ -17,15 +17,15 @@ from bleak import BleakScanner
 
 
 #if len(sys.argv) != 2:
-    #print(f"Usage: {sys.argv[0]} name")
-    #sys.exit(1)
+#    print(f"Usage: {sys.argv[0]} name")
+#    sys.exit(1)
 #wanted_name = sys.argv[1].lower()
-wanted_name = u"MED-WATCH"
+wanted_name = "MED-WATCH".lower()
 
 
 async def run():
     device = await BleakScanner.find_device_by_filter(
-        lambda d, ad: d.name and str(d.name.lower())[0:9] == wanted_name
+        lambda d, ad: d.name and d.name.lower()[0:len(wanted_name)] == wanted_name
     )
     print(device)
 
